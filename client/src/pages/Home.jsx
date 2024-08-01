@@ -12,7 +12,7 @@ const Home = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const location = useLocation()
-  console.log('user',user)
+  // console.log('user',user)
   const fetchUserDetails = async()=>{
     try {
         const URL = `${process.env.REACT_APP_BACKEND_URL}/api/user-details`
@@ -22,7 +22,7 @@ const Home = () => {
         })
 
         dispatch(setUser(response.data.data))
-
+        console.log("Response",response.data.data)
         if(response.data.data.logout){
             dispatch(logout())
             navigate("/sign")
