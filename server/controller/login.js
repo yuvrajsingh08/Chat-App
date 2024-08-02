@@ -36,6 +36,8 @@ async function login(request, response) {
    const cookieOptions = {
      http: true,
      secure: true,
+     sameSite: "Lax", // or 'Strict' or 'None'
+     maxAge: 24 * 60 * 60 * 1000, // 1 day
    };
 
    return response.cookie("token", token, cookieOptions).status(200).json({
