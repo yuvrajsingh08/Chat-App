@@ -113,8 +113,8 @@ const MessagePage = () => {
   },[socketConnection,params?.userId,user])
 
   const handleOnChange = (e)=>{
-    const { name, value} = e.target
-
+    const {name, value} = e.target
+    console.log("name from Message Page",name)
     setMessage(preve => {
       return{
         ...preve,
@@ -195,6 +195,7 @@ const MessagePage = () => {
                                   <img 
                                     src={msg?.imageUrl}
                                     className='w-full h-full object-scale-down'
+                                    alt='error in loading'
                                   />
                                 )
                               }
