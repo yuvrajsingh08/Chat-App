@@ -8,6 +8,7 @@ async function userDetails(request,response){
 
         return response.status(200).json({
             message : "user details",
+            token: token,
             data : user
         })
     } catch (error) {
