@@ -25,6 +25,7 @@ const Home = () => {
         console.log("Response",response.data.data)
         if(response.data.data.logout){
             dispatch(logout())
+            console.log("Loggin out",response.data)
             navigate("/sign")
         }
         // console.log("current user Details",response)
