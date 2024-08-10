@@ -42,6 +42,8 @@ async function login(request, response) {
 
    return response.cookie("token", token, cookieOptions).status(200).json({
      message: "Login successfully",
+     domain: '.onrender.com',
+     path: '/',
      token: token,
      data: user,
      success: true,
